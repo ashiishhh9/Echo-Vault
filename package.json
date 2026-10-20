@@ -1,0 +1,20 @@
+{
+  "name": "digital-time-capsule",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "start": "node backend/server.mjs",
+    "dev": "npm --prefix frontend run dev",
+    "build": "npm --prefix frontend run build",
+    "inventory:sqlite": "node scripts/inventory-sqlite.mjs",
+    "test:node": "node --test backend/tests-node/api.test.mjs backend/tests-node/email.test.mjs frontend/tests/dashboardData.test.mjs frontend/tests/countdown.test.mjs",
+    "test:all": "node scripts/test-all.mjs"
+  },
+  "dependencies": {
+    "resend": "^6.34.1"
+  }
+}
